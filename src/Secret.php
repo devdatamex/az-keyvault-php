@@ -36,6 +36,7 @@ class Secret extends Vault {
                     $version->attributes->exp ?? null,
                     $version->attributes->nbf ?? null,
                 ),
+                (array) $version->tags,
                 $version->contentType ?? null,
             );
 
@@ -81,6 +82,7 @@ class Secret extends Vault {
                 $response->attributes->exp ?? null,
                 $response->attributes->nbf ?? null,
             ),
+            (array) $response->tags,
             $response->contentType ?? null,
         );
     }
@@ -113,6 +115,7 @@ class Secret extends Vault {
                     $secret->attributes->exp ?? null,
                     $secret->attributes->nbf ?? null,
                 ),
+                (array) $secret->tags,
                 $secret->contentType ?? null,
             );
 
@@ -162,6 +165,7 @@ class Secret extends Vault {
                 $response->attributes->exp ?? null,
                 $response->attributes->nbf ?? null,
             ),
+            (array) $response->tags,
             $response->contentType ?? null,
         );
     }

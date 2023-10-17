@@ -22,11 +22,15 @@ class SecretVersionEntity implements EntityInterface {
     /** @var SecretAttributeEntity */
     public $attributes;
 
-    public function __construct(string $name, string $id, string $url, SecretAttributeEntity $attributes, string $content = null) {
+    /** @var array */
+    public $tags;
+
+    public function __construct(string $name, string $id, string $url, SecretAttributeEntity $attributes, array $tags = [], string $content = null) {
         $this->name = $name;
         $this->id = $id;
         $this->url = $url;
         $this->attributes = $attributes;
+        $this->tags = $tags;
         $this->content = $content;
     }
 

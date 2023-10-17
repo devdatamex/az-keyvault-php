@@ -12,12 +12,19 @@ class IdEntity implements EntityInterface {
     /** @var string */
     public $id;
 
-    /** @var KeyAttributeEntity | SecretAttributeEntity */
+    /** @var KeyAttributeEntity|SecretAttributeEntity */
     public $attributes;
 
-    public function __construct(string $id, $attributes, string $content = null) {
+    /** @var string */
+    public $content;
+
+    /** @var array */
+    public $tags;
+
+    public function __construct(string $id, $attributes, array $tags = [], string $content = null) {
         $this->id = $id;
         $this->attributes = $attributes;
+        $this->tags = $tags;
         $this->content = $content;
     }
 
